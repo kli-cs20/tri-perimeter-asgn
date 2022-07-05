@@ -1,13 +1,5 @@
 // Triangle Perimeter Calculator
 
-// HTML Elements to display answers upon calculation
-let AB = document.getElementById("ABlength");
-let AC = document.getElementById("AClength");
-let BC = document.getElementById("BClength");
-let perimeterEl = document.getElementById("perimeter");
-
-let perimeter = 0;
-
 // Button Event Listener
 document.getElementById("btn").addEventListener("click", getUserInput);
 
@@ -22,15 +14,22 @@ function getUserInput() {
     let y3 = +document.getElementById("y3").value;
 
     // Process Lengths of AB, AC, BC
-    AB.innerHTML = dist(x1, y1, x2, y2);
-    AC.innerHTML = dist(x1, y1, x3, y3);
-    BC.innerHTML = dist(x2, y2, x3, y3);
+    let AB = dist(x1, y1, x2, y2);
+    let AC = dist(x1, y1, x3, y3);
+    let BC = dist(x2, y2, x3, y3);
 
-    perimeterEl.innerHTML = perimeter;
+    displayResults(AB, AC, BC);
 }
 
 // Calculation Functions
 function dist(x1, y1, x2, y2) {
-    perimeter += Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
     return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+}
+
+// Display Results
+function displayResults(AB, AC, BC) {
+    document.getElementById("ABlength").innerHTML = AB;
+    document.getElementById("AClength").innerHTML = AC;
+    document.getElementById("BClength").innerHTML = BC;
+    document.getElementById("perimeter").innerHTML = AB + AC + BC;
 }
