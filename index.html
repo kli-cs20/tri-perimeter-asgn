@@ -15,7 +15,7 @@
 
   <body>
     <h1>Triangle Perimeter</h1>
-    <hr />
+    <hr/>
     <p>
       <img src="img/triangle-vertices.PNG" alt="Triangle Image" width="400" />
     </p>
@@ -28,19 +28,28 @@
     </p>
 
     <p>
-      <strong>Vertex A</strong> - x1: <input type="num" /> y1:
-      <input type="num" />
+      <strong>Vertex A</strong> - 
+      x1: <input type="number" id="x1"/> 
+      y1: <input type="number" id="y1"/>
     </p>
     <p>
-      <strong>Vertex B</strong> - x2: <input type="num" /> y2:
-      <input type="num" />
+      <strong>Vertex B</strong> - 
+      x2: <input type="number" id="x2"/> 
+      y2: <input type="number" id="y2"/>
     </p>
     <p>
-      <strong>Vertex C</strong> - x3: <input type="num" /> y3:
-      <input type="num" />
+      <strong>Vertex C</strong> - 
+      x3: <input type="number" id="x3"/> 
+      y3: <input type="number" id="y3"/>
     </p>
     <p>
-      <button>CALCULATE</button>
+      <button id="btn">CALCULATE</button>
     </p>
+
+    <p>AB = <span id="ABlength">---</span></p>
+    <p>AC = <span id="ABlength">---</span></p>
+    <p>BC = <span id="ABlength">---</span></p>
+    <p>Perimeter of ABC = <span id="perimeter">---</span></p>
+
   </body>
 </html>
