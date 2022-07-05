@@ -6,6 +6,8 @@ let AC = document.getElementById("AClength");
 let BC = document.getElementById("BClength");
 let perimeterEl = document.getElementById("perimeter");
 
+let perimeter = 0;
+
 // Button Event Listener
 document.getElementById("btn").addEventListener("click", getUserInput);
 
@@ -24,7 +26,6 @@ function getUserInput() {
     AC.innerHTML = dist(x1, y1, x3, y3);
     BC.innerHTML = dist(x2, y2, x3, y3);
 
-    let perimeter = 0;
     perimeterEl.innerHTML = perimeter;
 }
 
